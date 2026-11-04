@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وكيل YouTube الذكي</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="ambient orb-one"></div><div class="ambient orb-two"></div>
+    <main class="shell">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true"><span>▶</span></div>
+        <div><p class="eyebrow">YOUTUBE RAG AGENT</p><h1>تحدث مع أي فيديو</h1></div>
+        <span class="local-badge"><i></i> يعمل محليًا</span>
+      </header>
+      <p class="intro">حوّل أي فيديو مدعوم إلى معرفة قابلة للبحث، ثم اسأل باللغة التي تناسبك.</p>
+      <div class="steps" aria-label="خطوات الاستخدام"><span><b>١</b> أضف الرابط</span><span><b>٢</b> نفهرس المحتوى</span><span><b>٣</b> ابدأ المحادثة</span></div>
+      <section class="workspace">
+        <form id="video-form" class="video-card">
+          <label for="video-url">رابط فيديو YouTube</label>
+          <div class="input-row">
+            <input id="video-url" name="url" type="url" placeholder="https://www.youtube.com/watch?v=..." required />
+            <button type="submit"><span>فهرسة الفيديو</span><b>←</b></button>
+          </div>
+          <small>يدعم الفيديوهات العامة ذات الترجمة العربية أو الإنجليزية.</small>
+        </form>
+        <p id="status" role="status" aria-live="polite"></p>
+        <section id="chat" class="chat hidden" aria-live="polite">
+          <div class="chat-heading"><div><p class="eyebrow">المحادثة</p><h2>ماذا تريد أن تعرف؟</h2></div><span class="ready-dot">جاهز</span></div>
+          <div id="messages" class="messages"><div class="empty-state"><span>✦</span><p>الفيديو مفهرس الآن. ابدأ بسؤالٍ عن أهم الأفكار أو التفاصيل.</p></div></div>
+          <form id="question-form" class="question-form">
+            <input id="question" type="text" placeholder="مثال: ما أهم فكرة في الفيديو؟" required />
+            <button type="submit" aria-label="إرسال السؤال">↑</button>
+          </form>
+        </section>
+      </section>
+      <footer>إجابات مدعومة بمقاطع من نص الفيديو وتوقيتها.</footer>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
